@@ -1,0 +1,65 @@
+[
+  {
+    "name": "EcoCart",
+    "valuation": "15M",
+    "category": "Sustainability",
+    "founded": 2020,
+    "location": "Bangalore",
+    "logo": "assets/logos/ecocart.png",
+    "website": "https://ecocart.in"
+  },
+  {
+    "name": "FarmWise",
+    "valuation": "50M",
+    "category": "Agritech",
+    "founded": 2019,
+    "location": "Ranchi",
+    "logo": "assets/logos/ecocart.png",
+    "website": "https://ecocart.in"
+  },
+  {
+    "name": "BookNest",
+    "valuation": "8M",
+    "category": "EdTech",
+    "founded": 2021,
+    "location": "Delhi",
+    "logo": "assets/logos/ecocart.png",
+    "website": "https://ecocart.in"
+  },
+  {
+    "name": "BookNest",
+    "valuation": "8M",
+    "category": "EdTech",
+    "founded": 2021,
+    "location": "Delhi",
+    "logo": "assets/logos/ecocart.png",
+    "website": "https://ecocart.in"
+  },
+  {
+    "name": "BookNest",
+    "valuation": "8M",
+    "category": "EdTech",
+    "founded": 2021,
+    "location": "Delhi",
+    "logo": "assets/logos/ecocart.png",
+    "website": "https://ecocart.in"
+  },
+  {
+    "name": "BookNest",
+    "valuation": "8M",
+    "category": "EdTech",
+    "founded": 2021,
+    "location": "Delhi",
+    "logo": "assets/logos/ecocart.png",
+    "website": "https://ecocart.in"
+  },
+  {
+    "name": "BookNest",
+    "valuation": "8M",
+    "category": "EdTech",
+    "founded": 2021,
+    "location": "Delhi",
+    "logo": "assets/logos/ecocart.png",
+    "website": "https://ecocart.in"
+  }
+]
