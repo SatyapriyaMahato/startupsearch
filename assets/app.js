@@ -19,7 +19,7 @@ function renderTable(data) {
         const row = `
   <tr onclick="showDetails(${JSON.stringify(startup).replace(/"/g, '&quot;')})">
     <td data-label="Logo"><img src="${startup.logo}" alt="${startup.name} Logo" width="40"></td>
-    <td data-label="Name"><a href="${startup.website}" target="_blank">${startup.name}</a></td>
+    <td data-label="Name"><a class="company_name" href="${startup.website}" target="_blank">${startup.name}</a></td>
     <td data-label="Valuation">${startup.valuation}</td>
     <td data-label="Category">${startup.category}</td>
     <td data-label="Founded">${startup.founded}</td>

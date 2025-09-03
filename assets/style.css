@@ -1,107 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+:root {
+    /* Primary */
+    --Soft-Blue: rgb(83, 104, 223);
+    --Soft-Red: hsl(0, 94%, 66%);
+    --indigo-blue: #191e36;
+    --dark-blue: #164773;
+    --light-blue: #57AAF2;
+    --theme-4: #6B17BF;
+
+    /* Neutral */
+    --Grayish-Blue: hsl(229, 8%, 60%);
+    --Very-Dark-Blue: rgb(37, 43, 70);
+}
+
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--Very-Dark-Blue);
+    color: var(--Grayish-Blue);
     margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
 }
 
 h1 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
+    color: white;
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    animation: fadeInDown 1s ease-out;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+}
+
+a:hover {
+    color: var(--Very-dark-blue);
 }
 
 .filters {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
 }
 
 .filters input,
 .filters select,
 .filters button {
-    padding: 10px;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 8px;
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
     font-size: 1rem;
-    width: 100%;
-    max-width: 200px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    overflow-x: auto;
-}
-
-th,
-td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-
-th {
-    background-color: #f4f4f4;
-}
-
-img {
-    max-width: 40px;
-    height: auto;
-}
-
-#pagination {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    flex-wrap: wrap;
-}
-
-#pagination button {
-    padding: 8px 12px;
-    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    outline: none;
     cursor: pointer;
 }
 
+.filters input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.filters input:focus,
+.filters select:focus,
+.filters button:hover {
+    border-color: var(--Soft-Blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(83, 104, 223, 0.2);
+}
+
+.filters button#resetButton {
+    background-color: var(--Soft-Red);
+    color: white;
+    border: none;
+    transition: transform 0.3s ease-out, background-color 0.3s ease-in;
+}
+
+.filters button#resetButton:hover {
+    background-color: hsl(0, 84%, 56%);
+    transform: translateY(-2px) scale(1.05);
+}
+
+#startupTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out 0.6s backwards;
+}
+
+#startupTable th,
+#startupTable td {
+    padding: 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid var(--dark-blue);
+    transition: background-color 0.3s ease;
+}
+
+#startupTable thead th {
+    background-color: var(--indigo-blue);
+    color: white;
+    font-weight: 400;
+    letter-spacing: ..25rem;
+    position: sticky;
+    top: 0;
+}
+
+#startupTable tbody tr {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#startupTable tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+}
+
+#startupTable td:nth-child(1) {
+    width: 60px;
+    text-align: center;
+}
+
+#startupTable td img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+#startupTable td img:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+
+
+#pagination {
+    text-align: center;
+    margin-top: 2rem;
+    animation: fadeInUp 1s ease-out 0.9s backwards;
+}
+
+#pagination button {
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    border: 1px solid var(--Grayish-Blue);
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#pagination button.active {
+    background-color: var(--Soft-Blue);
+    color: white;
+    border-color: var(--Soft-Blue);
+}
+
+#pagination button:hover:not(.active) {
+    background-color: var(--Soft-Blue);
+    color: white;
+}
+
+/* Minimal Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Add to your existing CSS file, preferably at the end */
+
+/* Mobile-friendly adjustments for smaller screens */
 @media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
 
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .filters {
+        flex-direction: column;
+        /* Stack filter elements vertically */
+        align-items: stretch;
+        /* Stretch elements to full width */
+        gap: 0.75rem;
+        /* Reduce gap between elements */
+    }
+
+    .filters input,
+    .filters select,
+    .filters button {
+        width: 100%;
+        /* Make filter elements take full width */
+        box-sizing: border-box;
+        /* Ensure padding and border are included in the element's total width and height */
+        font-size: 0.9rem;
+        /* Smaller font size for better fit */
+    }
+
+    /* Table adjustments for smaller screens */
+    #startupTable,
+    #startupTable thead,
+    #startupTable tbody,
+    #startupTable th,
+    #startupTable td,
+    #startupTable tr {
         display: block;
+        /* Make all table elements act as block-level elements */
     }
 
-    thead {
+    #startupTable thead {
         display: none;
+        /* Hide the table header on small screens */
     }
 
-    tr {
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        background: #fafafa;
+    #startupTable tr {
+        margin-bottom: 1rem;
+        border: 1px solid var(--dark-blue);
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
-    td {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px 0;
+    #startupTable td {
         border: none;
-        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        /* Make space for pseudo-element labels */
+        text-align: right;
     }
 
-    td:last-child {
-        border-bottom: none;
-    }
-
-    td::before {
+    /* Use pseudo-elements to show column names as labels */
+    #startupTable td::before {
         content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1rem;
+        white-space: nowrap;
+        text-align: left;
         font-weight: bold;
-        margin-right: 10px;
-        color: #333;
+        color: var(--Soft-Blue);
     }
 }
